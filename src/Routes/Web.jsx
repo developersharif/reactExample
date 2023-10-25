@@ -1,6 +1,5 @@
 import {
-    BrowserRouter,
-    createBrowserRouter,
+ createHashRouter,
   } from "react-router-dom";
 import Param from "../components/Param";
 import Loader from "../components/Loader";
@@ -8,7 +7,7 @@ import Redirect from "../components/Redirect";
 import DataTable from "../components/Test/DataTable";
 import Home from "../Pages/Home";
 
-const Web = createBrowserRouter([
+const Web = createHashRouter([
     {
         path:"/",
         element:<Home/>
@@ -39,10 +38,4 @@ const Web = createBrowserRouter([
     }
 ]);
 
-export default function App() {
-    return (
-      <BrowserRouter basename="/reactExample">
-        <Web />
-      </BrowserRouter>
-    );
-  }
+export default Web;
