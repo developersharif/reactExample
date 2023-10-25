@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AppLayout from "./layout/AppLayout";
 import Description from "../components/Description";
 import CodeExample from "../components/CodeExample";
+import Anchor from "../components/Anchor";
 
 function TestEffect() {
   const [count, setCount] = useState(0);
@@ -25,6 +26,7 @@ function TestEffect() {
         <br />
         <button onClick={() => setData(data + 1)}>Click</button>
         <Description>
+          <Anchor>https://react.dev/reference/react/useEffect#reference</Anchor>
           useEffect is another essential React hook that allows you to perform
           side effects in your functional components. Side effects can be
           actions like data fetching, DOM manipulation, or subscribing to

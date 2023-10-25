@@ -2,6 +2,7 @@ import { useReducer } from "react";
 import AppLayout from "./layout/AppLayout";
 import Description from "../components/Description";
 import CodeExample from "../components/CodeExample";
+import Anchor from "../components/Anchor";
 //Reducer Component Example
 function UseReducer() {
     const [state,dispatch] = useReducer(countReducer,0)
@@ -24,6 +25,7 @@ function UseReducer() {
     <button onClick={handleClick}>Increment me</button>
     <button onClick={handleDecrement}>Decrement me</button>
     <Description>
+        <Anchor>https://react.dev/reference/react/useReducer#reference</Anchor>
     useReducer is another built-in React hook used for managing more complex state logic in functional components. It is an alternative to useState and is particularly useful when you have state transitions that depend on the previous state. It allows you to handle state updates in a more controlled and predictable manner.
     <CodeExample code={`
     /*

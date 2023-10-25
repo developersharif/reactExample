@@ -3,6 +3,7 @@ import { DefaultContext } from "../contexts/DefaultContext";
 import AppLayout from "./layout/AppLayout";
 import Description from "../components/Description";
 import CodeExample from "../components/CodeExample";
+import Anchor from "../components/Anchor";
 
 function Context() {
   const globalValues = useContext(DefaultContext);
@@ -22,6 +23,7 @@ function Context() {
       Global State: {globalValues?.data?.data?.user?.name} <br />
       <button onClick={handleClick}>Update Global State</button>
       <Description>
+        <Anchor>https://react.dev/reference/react/memo#reference</Anchor>
       The Context API is a feature in React that provides a way to share data between components without having to pass props through every level of the component tree. It's particularly useful for managing global state or sharing configuration settings in an application.
       <CodeExample code={`
       /*

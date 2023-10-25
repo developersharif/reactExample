@@ -2,6 +2,7 @@ import { useState } from "react";
 import AppLayout from "./layout/AppLayout";
 import Description from "../components/Description";
 import CodeExample from "../components/CodeExample";
+import Anchor from "../components/Anchor";
 
 function UseState() {
   //array
@@ -27,6 +28,7 @@ function UseState() {
         <input type="text" placeholder="name" onChange={handleInput} />
         <button onClick={handleClick}>Add</button>
         <Description>
+          <Anchor>https://react.dev/reference/react/useState#reference</Anchor>
           useState is a built-in React hook that allows you to add state to your
           functional components. In simple terms, it's like having variables
           that can hold and manage data that changes over time within your

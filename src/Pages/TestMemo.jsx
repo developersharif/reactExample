@@ -4,6 +4,7 @@ import AppLayout from "./layout/AppLayout";
 import ViewWithmemo from "../components/ViewWithmemo";
 import Description from "../components/Description";
 import CodeExample from "../components/CodeExample";
+import Anchor from "../components/Anchor";
 
 function TestMemo() {
     const [current,setCurrent] = useState(0);
@@ -19,6 +20,7 @@ function TestMemo() {
     <button onClick={()=>setCurrent(current+1)}>2.Update current compoent</button>
     <button onClick={()=>setMemoView(memoView+1)}>3.Update UsedMemoView compoent</button>
     <Description>
+        <Anchor>https://react.dev/reference/react/memo#reference</Anchor>
     React.memo is a higher-order component (HOC) that can be used to optimize the performance of functional components. It's designed for preventing unnecessary re-renders of a component by memoizing it based on its props. When the props of a memoized component don't change, React will reuse the previously rendered result, helping to improve performance.
     <CodeExample code={`
     /*
