@@ -176,9 +176,6 @@ const DataTable = () => {
     </>
   );
 };
-
-// Export the DataTable component
-export default DataTable;
 `}/>
 </Description>
 </AppLayout>
