@@ -1,4 +1,5 @@
 import {
+    BrowserRouter,
     createBrowserRouter,
   } from "react-router-dom";
 import Param from "../components/Param";
@@ -38,4 +39,10 @@ const Web = createBrowserRouter([
     }
 ]);
 
-export default Web;
+export default function App() {
+    return (
+      <BrowserRouter basename="/reactExample">
+        <Web />
+      </BrowserRouter>
+    );
+  }
