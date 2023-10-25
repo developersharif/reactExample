@@ -1,6 +1,6 @@
 {
   "name": "reactsession",
-  "homepage":"https://developersharif.github.io/reactExample",
+  "homepage": "https://developersharif.github.io/reactExample",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -17,7 +17,8 @@
     "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.17.0"
+    "react-router-dom": "^6.17.0",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
