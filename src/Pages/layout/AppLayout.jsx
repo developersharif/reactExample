@@ -16,6 +16,13 @@ const AppLayout = ({ title = "Default Title", children }) => {
     }
   });
   document.title = title;
+  const activeStyle = ({ isActive, isPending, isTransitioning }) => {
+    return {
+      fontWeight: isActive ? "bold" : "",
+      color: isPending ? "red" : "black",
+      viewTransitionName: isTransitioning ? "slide" : "",
+    };
+  };
   return (
     <div>
       <center>
@@ -31,117 +38,63 @@ const AppLayout = ({ title = "Default Title", children }) => {
       >
         <NavLink
           to="/"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           Home
         </NavLink>{" "}
         <br />
         <NavLink
           to="/usestate"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           useState Example
         </NavLink>{" "}
         <br />
         <NavLink
           to="/useeffect"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           useEffect Example
         </NavLink>{" "}
         <br />
         <NavLink
           to="/memo"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           Memo Example
         </NavLink>{" "}
         <br />
         <NavLink
           to="/reducer"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           useReducer Example
         </NavLink>{" "}
         <br />
         <NavLink
           to="/context"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           Context API
         </NavLink>{" "}
         <br />
         <NavLink
           to="/loader"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           Route Loader
         </NavLink>{" "}
         <br />
         <NavLink
           to="/redirect"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           Redirect
         </NavLink>{" "}
         <br />
         <NavLink
           to="/update/hello-world"
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           Parameter
         </NavLink>{" "}
@@ -149,13 +102,7 @@ const AppLayout = ({ title = "Default Title", children }) => {
         <NavLink
           to="/datatable"
           replace={true}
-          style={({ isActive, isPending, isTransitioning }) => {
-            return {
-              fontWeight: isActive ? "bold" : "",
-              color: isPending ? "red" : "black",
-              viewTransitionName: isTransitioning ? "slide" : "",
-            };
-          }}
+          style={activeStyle}
         >
           Data Table
         </NavLink>{" "}
