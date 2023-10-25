@@ -1,11 +1,16 @@
 import {
  createHashRouter,
   } from "react-router-dom";
-import Param from "../components/Param";
-import Loader from "../components/Loader";
+import Param from "../Pages/Param";
 import Redirect from "../components/Redirect";
-import DataTable from "../components/Test/DataTable";
 import Home from "../Pages/Home";
+import DataTable from "../Pages/DataTable";
+import Loader from "../Pages/Loader";
+import Context from "../Pages/Context";
+import UseReducer from "../Pages/UserReducer";
+import UseState from "../Pages/UseState";
+import TestMemo from "../Pages/TestMemo";
+import Redirected from "../Pages/Redirected";
 
 const Web = createHashRouter([
     {
@@ -13,7 +18,7 @@ const Web = createHashRouter([
         element:<Home/>
     },
     {
-        path:"/test",
+        path:"/loader",
         element:<Loader/>,
         loader:()=>{
             const getUsers = async ()=>{
@@ -25,12 +30,32 @@ const Web = createHashRouter([
         }
     },
     {
+        path:"/usestate",
+        element:<UseState/>
+    },
+    {
+        path:"/memo",
+        element:<TestMemo/>
+    },
+    {
+        path:"/reducer",
+        element:<UseReducer/>
+    },
+    {
+        path:"/context",
+        element:<Context/>
+    },
+    {
         path:"/update/:id?",
         element:<Param/>
     },
     {
         path:"/redirect",
         element:<Redirect/>
+    },
+    {
+        path:"/redirected",
+        element:<Redirected/>
     },
     {
         path:"/datatable",
