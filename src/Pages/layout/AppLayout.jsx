@@ -19,7 +19,7 @@ const AppLayout = ({title="Default Title",children}) => {
     return (
         <div>
         Global State: {data.data.data.user.name} { data.data.data.user.email }
-      <h2> Links:</h2> <br />
+      <h2> Routes:</h2>
       <Link to="/">Home</Link> <br />
       <Link to="/test">Loader APi Example</Link> <br />
       <Link to="/redirect">Redirect</Link> <br />
