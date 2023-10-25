@@ -10,8 +10,8 @@ const App = ()=>{
     isLoading:false,
     data:{
       user:{
-        name:"sharif",
-        email:"developersharif@yahoo.com"
+        name:"Default Value",
+        email:"example@test.test"
       }
     }
   });
