@@ -11,6 +11,7 @@ import UseReducer from "../Pages/UserReducer";
 import UseState from "../Pages/UseState";
 import TestMemo from "../Pages/TestMemo";
 import Redirected from "../Pages/Redirected";
+import TestEffect from "../Pages/TestEffect";
 
 const Web = createHashRouter([
     {
@@ -32,6 +33,10 @@ const Web = createHashRouter([
     {
         path:"/usestate",
         element:<UseState/>
+    },
+    {
+        path:"/useeffect",
+        element:<TestEffect/>
     },
     {
         path:"/memo",
