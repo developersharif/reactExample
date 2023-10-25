@@ -2,13 +2,15 @@
 
 import { useContext, useEffect } from "react";
 import { DefaultContext } from "../../contexts/DefaultContext";
-import { Link, NavLink, useNavigation } from "react-router-dom";
+import { NavLink, useNavigation } from "react-router-dom";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 const AppLayout = ({ title = "Default Title", children }) => {
   const data = useContext(DefaultContext);
   const navigation = useNavigation();
   useEffect(() => {
+    //Nprogress Loading on/off logic!
+    //Reference: https://ricostacruz.com/nprogress/
     if (navigation.state === "loading") {
       NProgress.start();
     } else {
@@ -16,6 +18,7 @@ const AppLayout = ({ title = "Default Title", children }) => {
     }
   });
   document.title = title;
+  //Reference: https://reactrouter.com/en/main/components/nav-link#style
   const activeStyle = ({ isActive, isPending, isTransitioning }) => {
     return {
       fontWeight: isActive ? "bold" : "",
@@ -36,6 +39,7 @@ const AppLayout = ({ title = "Default Title", children }) => {
           justifyContent: "space-evenly",
         }}
       >
+        {/* Reference:  https://reactrouter.com/en/main/components/nav-link#navlink */}
         <NavLink
           to="/"
           style={activeStyle}
