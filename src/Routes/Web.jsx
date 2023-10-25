@@ -12,7 +12,9 @@ import UseState from "../Pages/UseState";
 import TestMemo from "../Pages/TestMemo";
 import Redirected from "../Pages/Redirected";
 import TestEffect from "../Pages/TestEffect";
-
+//Always use to createBrowserRouter is best practice
+//Reference https://reactrouter.com/en/main/routers/create-browser-router#createbrowserrouter
+//We used createHashRouter for github pages deployment!
 const Web = createHashRouter([
     {
         path:"/",
