@@ -1,8 +1,6 @@
-import { memo } from "react";
-
-function View({value=1}) {
-    console.log("View called/rendered");
+function View({value}) {
+    alert("View rendered(Without Memo)");
     return (<>{value}</>);
 }
 
-export default memo(View);
+export default View;
