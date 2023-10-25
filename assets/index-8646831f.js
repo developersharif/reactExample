@@ -193,9 +193,6 @@ const DataTable = () => {
     </>
   );
 };
-
-// Export the DataTable component
-export default DataTable;
 `})})]})})};function iM(){const e=fh();return h.jsx(h.Fragment,{children:h.jsxs(En,{children:[h.jsx("h2",{children:"Rote Loader data:"}),e.map((t,n)=>h.jsx("li",{children:t.name},n)),h.jsxs(Hn,{children:["Full Details:",h.jsx("a",{href:"https://reactrouter.com/en/main/hooks/use-loader-data",target:"_blank",children:"https://reactrouter.com/en/main/hooks/use-loader-data"})]})]})})}function oM(){var n,r,a;const e=D.useContext(Wd);function t(){e.setData({...e.data,isLoading:!0,data:{...e.data.data,user:{...e.data.data.user,name:"updated name"}}})}return h.jsx(h.Fragment,{children:h.jsxs(En,{children:["Global State: ",(a=(r=(n=e==null?void 0:e.data)==null?void 0:n.data)==null?void 0:r.user)==null?void 0:a.name," ",h.jsx("br",{}),h.jsx("button",{onClick:t,children:"Update Global State"}),h.jsxs(Hn,{children:[h.jsx(Zr,{children:"https://react.dev/reference/react/memo#reference"}),"The Context API is a feature in React that provides a way to share data between components without having to pass props through every level of the component tree. It's particularly useful for managing global state or sharing configuration settings in an application.",h.jsx(ea,{code:`
       /*
       Suppose you have a theme configuration that you want to make available to various components throughout your application. Here's how you can use the Context API to achieve this:
