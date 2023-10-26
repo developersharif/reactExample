@@ -7,7 +7,7 @@ function Loader() {
   return (
     <>
       <AppLayout>
-        <h2>Rote Loader data:</h2>
+        <h2>Route Loader data:</h2>
         {data.map((item, index) => (
           <li key={index}>{item.name}</li>
         ))}
