@@ -1,11 +1,19 @@
-import { memo } from "react";
+import 'animate.css';
+import { memo , useState, useEffect} from "react";
 function ViewWithmemo({value}) {
-    alert("Rendered!(With Memo)")
+    const [animate, setAnimate] = useState('');
+  useEffect(() => {
+    setAnimate('animate__animated animate__bounce');
+    const animationTimeout = setTimeout(() => {
+      setAnimate('');
+    }, 600);
+    return () => clearTimeout(animationTimeout);
+  }, [value]);
+
     return (
-        <>
+        <div className={animate}>
         {value}
-        </>
+        </div>
     );
 }
-
 export default memo(ViewWithmemo);
